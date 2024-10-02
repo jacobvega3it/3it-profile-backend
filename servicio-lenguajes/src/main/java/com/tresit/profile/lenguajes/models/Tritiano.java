@@ -1,21 +1,9 @@
-package com.tresit.profile.tritianos.entities;
+package com.tresit.profile.lenguajes.models;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.Transient;
-
-@Entity
-@Table(name="tritianos")
 public class Tritiano {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nombre;
@@ -34,11 +22,7 @@ public class Tritiano {
 
     private String enlaceJira;
 
-    @Column(name = "created_at")
     private LocalDate createdAt;
-
-    @Transient
-    private int port;
 
     public Long getId() {
         return id;
@@ -120,12 +104,6 @@ public class Tritiano {
         this.createdAt = createdAt;
     }
 
-    public int getPort() {
-        return port;
-    }
-
-    public void setPort(int port) {
-        this.port = port;
-    }
-
+    
+    
 }
