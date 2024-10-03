@@ -1,4 +1,4 @@
-package com.tresit.profile.lenguajes.models;
+package com.tresit.profile.aplicaciones.models;
 
 import java.time.LocalDate;
 

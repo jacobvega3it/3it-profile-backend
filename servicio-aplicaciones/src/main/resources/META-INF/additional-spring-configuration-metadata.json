@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "config.baseurl.endpoint.servicio-tritianos",
+  "type": "java.lang.String",
+  "description": "A description for 'config.baseurl.endpoint.servicio-tritianos'"
+}]}

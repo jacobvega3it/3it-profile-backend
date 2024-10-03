@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.tresit.profile.lenguajes.models.Tritiano;
 
-@FeignClient(url = "localhost:8001", name = "servicio-tritianos")
+@FeignClient(name = "servicio-tritianos")
 public interface TritianoFeignClient {
 
     @GetMapping
