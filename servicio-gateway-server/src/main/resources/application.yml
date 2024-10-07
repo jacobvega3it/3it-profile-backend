@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: servicio-tritianos
+        uri: lb://servicio-tritianos
+        predicates:
+        - Path=/api/tritianos/**
+        filters:
+        - StripPrefix=2
+      - id: servicio-lenguajes
+        uri: lb://servicio-lenguajes
+        predicates:
+        - Path=/api/lenguajes/**
+        filters:
+        - StripPrefix=2
+      - id: servicio-aplicaciones
+        uri: lb://servicio-aplicaciones
+        predicates:
+        - Path=/api/aplicaciones/**
+        filters:
+        - StripPrefix=2
