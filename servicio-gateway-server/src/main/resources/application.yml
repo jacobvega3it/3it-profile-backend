@@ -6,14 +6,24 @@ spring:
         uri: lb://servicio-tritianos
         predicates:
         - Path=/api/tritianos/**
+        # - Header=token, \d+
+        # - Method=GET, POST
+        # - Query=color
+        # - Cookie=color, azul
+        # - Header=Content-Type, application/json
         filters:
         - StripPrefix=2
+        - EjemploCookie=Este es un mensaje personalizado para tritianos, user, tritiano
       - id: servicio-lenguajes
         uri: lb://servicio-lenguajes
         predicates:
         - Path=/api/lenguajes/**
         filters:
         - StripPrefix=2
+        - AddRequestHeader=token-request, aabbsjdfjsaj
+        - AddResponseHeader=token-response, 234340823
+        - AddRequestParameter=name, 3IT
+        - SetResponseHeader=Content-Type, text/plain
       - id: servicio-aplicaciones
         uri: lb://servicio-aplicaciones
         predicates:
